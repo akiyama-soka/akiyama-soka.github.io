@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+input[type="submit"]{
+    border: 1pm solid #0086F9;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #0086f9, #b6d6f7);
+    color: #FFF;
+}
+
+@charset "utf-8";
+
+a{
+    text-decoration: none;
+}
+
+#menubar > ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#menubar > ul > li {
+    display: inline;
+    margin: 0 16px 0 0;
+    padding: 4px;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    background: linear-gradient(#FFFFFF,#888888);
+}
+
+.box1{
+    width: 16%;
+    float: left;
+    height: 100px;
+    background-color: brown;
+}
+
+.box2{
+    margin-left: 20px;
+    width: 60%;
+    float: left;
+    height: 100px;
+    background-color: aqua;
+}
+
+.box3{
+    clear: both;
+    height: 100px;
+    background-color: chartreuse;
+}
+
+@charset "utf-8";
+/*より厳密にしているものが優先される*/
+/* その上で、後から書いたものが優先される */
+
+/* 要素セレクタ */
+ul{
+    /* リストの行頭文字を変更するプロパティ */
+    list-style: none;
+}
+
+table, td{
+    border: 1px solid #100;
+}
+
+/* IDセレクタ */
+#top{
+    color: crimson;
+}
+
+#next{
+    color: darkmagenta;
+}
+
+/* クラスセレクタ */
+.text-center{
+    text-align: center;
+}
+
+.red{
+    color: red;
+}
+
+/* 複数のセレクタを同時に指定する */
+h1, .red{
+    font-size: 2em;
+}
+
+/* 子孫セレクタ(HTMLタグの階層構造を指定できる) */
+nav li green{
+    color: green;
+}
+
+/* 子セレクタ(HTMLタグのより厳密な階層構造を指定できる) */
+div > ul > .blue{
+    color: blue;
+}
+
+/* 隣接セレクタ(同じ階層で直後に隣接している要素を指定できる) */
+p + p{
+    font-size: 2em;
+}
+
+/* 応用的なセレクタ */
+/* 疑似クラス */
+tr:first-child{
+    background-color: red;
+}
+
+tr:last-child{
+    background-color: blue;
+}
+
+tr:nth-child(odd){
+    background-color: green;
+}
+
+tr:nth-child(even){
+    background-color: purple;
+}
+
+/* カーソルが乗っている要素 */
+a:hover{
+    font-size: 3em;
+}
+
+/* 未訪問のリンク */
+a:link{
+    color: black;
+}
+
+/* 訪問済みのリンク */
+a:visited{
+    color: black;
+}
+
+h1:hover{
+    font-size: 4em;
+}
+
+
+
+
+
+@charset "utf-8";
+
+body{
+    font-size: 16px;
+    /* 基本ゴシックの方が見やすくてゴシックはsans-serif */
+    /* 明朝はserif */
+    /* 前にあるフォントを優先的に使う */
+    /* 中にスペースを含んでいるときダブルクオーテーションを使う */
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", Meiryo, "MS Pゴシック", serif;
+}
+
+p{
+    /* 文字の色を変更するプロパティ */
+    color: #FFFFFF;/* RGBによる色指定　白：#FFFFFF */
+    color: #000000;/* RGBによる色指定　黒：#000000 */
+    /* 後の色指定の方が優先される */
+    color: #0000cd;
+
+    /* 文字のサイズを変更するプロパティ */
+    /* 単位は px, em, rem, % */
+    font-size: 24px;
+    /* 上に書いたサイズからの相対的な指定 */
+    /*    font-size: 2em;*/
+
+    /* フォントの種類を指定するプロパティ */
+    /* serif:明朝体系 sans-serif:ゴシック体系 */
+    font-family: serif;
+
+    /* 行の高さを指定するプロパティ */
+    /* 単位は px, em, rem, % */
+    line-height: 2em;
+
+    /* 長い文章を書いているときに読みやすくする指定 */
+    text-align: justify;
+}
+
+h1{
+    /* テキストの行構えを変更するプロパティ */
+    text-align: center;
+
+    /* 背景色を変更するプロパティ */
+    background-color: darkgrey;
+}
+
+div{
+    /*    background-color: blueviolet;*/
+    /*    背景画像を変更するプロパティ*/
+    background-image: url(../../0521/image/%E3%82%AB%E3%83%AB%E3%82%B7%E3%83%95%E3%82%A1%E3%83%BC.gif);
+    background-repeat: no-repeat;
+}
+
+ul{
+    /*    リストの行頭文字を変更するプロパティ*/
+    list-style: none;
+}
